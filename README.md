@@ -1,6 +1,10 @@
 # Infinistack 🎩✨🐇
 
-Infinite recursion in JS without stack overflow errors! Based on magic (and abuse of exceptions).
+Infinite recursion in JS without stack overflow errors!
+
+Based on magic, abuse of exceptions and the work of [@razimantv](https://gist.github.com/razimantv/1b33d4a090a5bc9ed94928012b37c3f0).
+
+If you need this package to make your code work, then my advice would be to rethink your code structure. This library works, but is not efficient or safe. Instead of using this, unroll you recursion into iterative algorithms, you will thank me later.
 
 By [@crubier](https://github.com/crubier)
 
@@ -46,4 +50,8 @@ Amazing. Thanks to [@razimantv](https://github.com/razimantv) for [the original 
 
 ## Caveats
 
-Probably does not work for async functions or some non trivial recursion configurations (not sure though, it might work)
+Not yet tested on:
+
+* Async functions
+* Non trivial recursion schemes
+* Function calls with non-stringifiable arguments (higher order functions for example)
