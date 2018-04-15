@@ -55,5 +55,5 @@ Amazing. Thanks to [@razimantv](https://github.com/razimantv) for [the original 
 Not yet tested on:
 
 * Async functions
-* Non trivial recursion schemes
-* Function calls with non-stringifiable arguments (higher order functions for example)
+* Complex recursion schemes
+* Function with non-stringifiable arguments (higher order functions for example)
