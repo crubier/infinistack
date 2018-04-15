@@ -46,6 +46,8 @@ const factorial = infinistack(N => {
 console.log(factorial(180000));
 ```
 
+For more info, see [the tests](https://github.com/crubier/infinistack/blob/master/test.js)
+
 Amazing. Thanks to [@razimantv](https://github.com/razimantv) for [the original idea in python](https://gist.github.com/razimantv/1b33d4a090a5bc9ed94928012b37c3f0)
 
 ## Caveats
