@@ -15,36 +15,31 @@ npm install infinistack
 Here is a classical, "dumb" factorial implementation:
 
 ```javascript
-function factorialDumb(N) {
+const factorial = N => {
   if (N == 0) {
     return 1;
   }
-  return N * factorialDumb(N - 1);
-}
+  return N * factorial(N - 1);
+};
 
 // Don't do this, it will crash:
-
-console.log(factorialDumb(180000));
+console.log(factorial(180000));
 ```
 
 This can be transformed with infinistack in order to emancipate from stack overflow errors:
 
 ```javascript
-const infinistack = require("infinistack");
+import infinistack from "infinistack";
 
-let factorialStack; // The actual function that we will be able to call
-function factorialSmart(N) {
-  // Another function which acts as a prototype
+const factorial = infinistack(N => {
   if (N == 0) {
     return 1;
   }
-  return N * factorialStack(N - 1); // Recursion but not on itself
-}
-factorialStack = infinistack(factorialSmart); // Make the magic happen
+  return N * factorial(N - 1);
+});
 
-// This works:
-
-console.log(factorialStack(180000));
+// This works now!
+console.log(factorial(180000));
 ```
 
 Amazing. Thanks to [@razimantv](https://github.com/razimantv) for [the original idea in python](https://gist.github.com/razimantv/1b33d4a090a5bc9ed94928012b37c3f0)
