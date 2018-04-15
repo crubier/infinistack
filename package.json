@@ -1,7 +1,7 @@
 {
   "name": "infinistack",
-  "version": "1.0.0",
-  "description": "Infinite recursion in JS without stack overflow !",
+  "version": "1.0.1",
+  "description": "Infinite recursion in JS without stack overflow errors!",
   "main": "index.js",
   "scripts": {
     "test": "node test.js",

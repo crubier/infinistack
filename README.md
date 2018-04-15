@@ -1,6 +1,8 @@
-# Infinistack
+# Infinistack 🎩✨🐇
 
-Infinite recursion in JS without stack overflow errors !
+Infinite recursion in JS without stack overflow errors! Based on magic (and abuse of exceptions).
+
+By [@crubier](https://github.com/crubier)
 
 ## Install
 
@@ -30,14 +32,15 @@ This can be transformed with infinistack in order to emancipate from stack overf
 ```javascript
 const infinistack = require("infinistack");
 
-let factorialStack;
+let factorialStack; // The actual function that we will be able to call
 function factorialSmart(N) {
+  // Another function which acts as a prototype
   if (N == 0) {
     return 1;
   }
-  return N * factorialStack(N - 1);
+  return N * factorialStack(N - 1); // Recursion but not on itself
 }
-factorialStack = infinistack(factorialSmart);
+factorialStack = infinistack(factorialSmart); // Make the magic happen
 
 // This works:
 
