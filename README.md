@@ -2,7 +2,7 @@
 
 Infinite recursion in JS without stack overflow errors!
 
-Based on magic, abuse of exceptions and the work of [@razimantv](https://gist.github.com/razimantv/1b33d4a090a5bc9ed94928012b37c3f0).
+Based on magic, memoization, abuse of exceptions and the work of [@razimantv](https://gist.github.com/razimantv/1b33d4a090a5bc9ed94928012b37c3f0).
 
 If you need this package to make your code work, then my advice would be to rethink your code structure. This library works, but is not efficient or safe. Instead of using this, unroll you recursion into iterative algorithms, you will thank me later.
 
